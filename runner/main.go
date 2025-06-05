@@ -13,7 +13,6 @@ func main() {
 	router := gin.Default()
 
 	router.POST("/run-job", func(c *gin.Context) {
-		// Parse incoming form fields
 		method := c.PostForm("method")
 		lags := c.PostForm("lags")
 		window := c.PostForm("window")
@@ -30,8 +29,6 @@ func main() {
 			return
 		}
 		defer file.Close()
-
-		// Create multipart form data
 		var buf bytes.Buffer
 		writer := multipart.NewWriter(&buf)
 
@@ -47,8 +44,6 @@ func main() {
 		_ = writer.WriteField("window", window)
 
 		writer.Close()
-
-		// Send request to causal engine
 		resp, err := http.Post("http://localhost:8000/analyze", writer.FormDataContentType(), &buf)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "engine connection failed: " + err.Error()})
@@ -61,7 +56,6 @@ func main() {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to read engine response"})
 			return
 		}
-
 		c.Data(resp.StatusCode, "application/json", body)
 	})
 

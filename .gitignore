@@ -1,10 +1,16 @@
-gateway/HELP.md
-target/
-gateway/.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# === Build output ===
+/target/
+/build/
 
-### STS ###
+# === OS / System files ===
+.DS_Store
+
+# === IDEs ===
+# IntelliJ
+.idea/
+*.iml
+
+# Eclipse / STS
 .apt_generated
 .classpath
 .factorypath
@@ -13,80 +19,48 @@ gateway/.mvn/wrapper/maven-wrapper.jar
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# VSCode
+.vscode/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
-
-
-.idea/
-.gitignore
-causana.iml
-misc.xml
-modules.xml
-vcs.xml
-myenv
-bin
-Activate.ps1
-activate
-activate.csh
-activate.fish
-f2py
-fastapi
-numpy-config
-pip
-pip3
-pip3.12
-python
-python3
-python3.12
-uvicorn
-lib/python3.12/site-packages
-pyvenv.cfg
-main.py
-requirements.txt
-gateway/.mvn/wrapper
-maven-wrapper.properties
-src
-main
-java
-resources
-application.properties
-.DS_Store
-test/java/com/causana/gateway
-GatewayApplicationTests.java
-gateway/.gitattributes
+# === Maven ===
+gateway/.mvn/wrapper/maven-wrapper.jar
 gateway/mvnw
 gateway/mvnw.cmd
-gateway/pom.xml
 
-.idea
-runner.iml
-README.md
-causal_test_biased.csv
-test.py
-*.iml
+# === Virtualenv / Python ===
+myenv/
+bin/
+lib/
+pyvenv.cfg
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+.env/
+.venv/
+*.sqlite
+*.db
+
+# === App-specific files ===
+*.csv
+test/
+
+# === Git ===
 *.vcs.xml
+
+# === Safe exclusions for test files ===
 src/test/
-test/
-*.csv
-*.iml
-*.csv
-test.py
-test/
-src/test/
-gateway/test/
+
+# === Ignore logs ===
+*.log
