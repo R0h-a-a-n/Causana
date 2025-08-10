@@ -12,7 +12,10 @@
     "react-graph-vis": "^1.0.7"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.15.4",
+    "@parcel/transformer-jsonld": "^2.15.4",
+    "@parcel/transformer-webmanifest": "^2.15.4",
     "parcel": "^2.10.3",
     "process": "^0.11.10"
   }
-} 
+}

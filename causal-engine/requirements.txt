@@ -3,3 +3,6 @@ uvicorn
 pandas
 statsmodels
 python-multipart
+scipy
+scikit-learn
+numpy
