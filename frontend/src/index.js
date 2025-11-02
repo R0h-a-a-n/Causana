@@ -342,7 +342,7 @@ const ValidationInfo = ({ validation }) => {
     if (!validation) return null;
 
     const getStatusColor = (isValid) => isValid ? '#4CAF50' : '#f44336';
-    const getStatusIcon = (isValid) => isValid ? '✅' : '❌';
+    const getStatusIcon = (isValid) => isValid ? 'YES' : 'NO';
 
     return (
         <div className="validation-panel">
@@ -358,7 +358,7 @@ const ValidationInfo = ({ validation }) => {
             
             <div className="validation-grid">
                 <div className="validation-card">
-                    <h4>📊 Data Structure</h4>
+                    <h4> Data Structure</h4>
                     <div className="stat-row">
                         <span>Rows:</span>
                         <span className="stat-value">{validation.stats?.rows}</span>
@@ -374,7 +374,7 @@ const ValidationInfo = ({ validation }) => {
                 </div>
                 
                 <div className="validation-card">
-                    <h4>🔢 Column Types</h4>
+                    <h4> Column Types</h4>
                     <div className="stat-row">
                         <span>Numeric:</span>
                         <span className="stat-value">{validation.stats?.numeric_columns}</span>
@@ -390,7 +390,7 @@ const ValidationInfo = ({ validation }) => {
                 </div>
                 
                 <div className="validation-card">
-                    <h4>⚠️ Data Quality</h4>
+                    <h4> Data Quality</h4>
                     <div className="stat-row">
                         <span>Missing Values:</span>
                         <span className="stat-value">{validation.stats?.missing_values}</span>
@@ -404,7 +404,7 @@ const ValidationInfo = ({ validation }) => {
             
             {validation.warnings && validation.warnings.length > 0 && (
                 <div className="warnings-panel">
-                    <h4>⚠️ Warnings</h4>
+                    <h4> Warnings</h4>
                     <div className="warnings-list">
                         {validation.warnings.map((warning, index) => (
                             <div key={index} className="warning-item">
